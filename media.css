@@ -198,9 +198,10 @@
 }
 @media (max-width: 500px) {
   html {
-    font-size: 7px;
+    font-size: 9px;
   }
   .text-2 {
-    line-height: 2.5rem;
+    line-height: 2rem;
   }
 }
+
