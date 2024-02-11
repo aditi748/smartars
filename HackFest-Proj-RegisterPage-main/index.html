@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Anti Ragging Programme</h1>
+        <h2>Registration Form For Students</h2>
+        <form action="register.php" method="post">
+            <img src="./9005183_4063292.jpg" alt="Background theme image" class="background-image">
+            <div class="form-group">
+                <label for="First Name">First Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="Last Name">Last Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required minlength="8">
+                <span class="password-strength"></span>
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </div>
+            <div class="form-group">
+                <label for="Mobile Number">Mobile Number(+91):</label>
+                <input type="number" id="mobile_number" name="mobile number" required>
+            </div>
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <div class="form-group">
+                <label for="state">State:</label>
+                <select id="state" name="state" required>
+                    <option value="">Select State</option>
+                    <option value="assam">Assam</option>
+                    <option value="bihar">Bihar</option>
+                    <option value="gujrat">Gujrat</option>
+                    <option value="wb">West Bengal</option>
+                </select>
+                <!--- <input type="text" id="state" name="state" required> --->
+            </div>
+            <div class="form-group">
+                <label for="year">Year:</label>
+                <select id="year" name="year" required>
+                    <option value="">Select Year</option>
+                    <option value="1st year">1st year</option>
+                    <option value="2nd year">2nd year</option>
+                    <option value="3rd year">3rd year</option>
+                    <option value="4th year">4th year</option>
+                </select>
+            </div>
+            <h5>Fill Student's Details First And Then Come to College Details</h5>
+            <div class="form-group">
+                <label for="Select State">State in which college is based:</label>
+                <select id="state" name="state" required>
+                    <option value="">Select State</option>
+                    <option value="assam">Assam</option>
+                    <option value="bihar">Bihar</option>
+                    <option value="gujrat">Gujrat</option>
+                    <option value="wb">West Bengal</option>
+                </select>
+               <!-- <input type="text" id="state" name="state" required>  -->
+            </div>
+            <div class="form-group">
+                <label for="college name">College Name (Select College State First):</label>
+                <input type="text" id="college name" name="college name" required>
+            </div>
+            <h5>Select College First And Then Fill The Following As Per The College Details</h5>
+            <div>
+                <label for="degree name">Name of the Course</label>
+                <select id="degree" name="degree" required>
+                    <option value="">Select Course</option>
+                    <option value="btech">B.TECH(CSE)</option>
+                    <option value="aimal">B.TECH(CSE-AIML)</option>
+                    <option value="csit">B.TECH(CSIT)</option>
+                    <option value="cst">B.TECH(CST)</option>
+                    <option value="bca">BCA</option>
+                    <option value="bba">BBA</option>
+                </select>
+               <!-- <input type="text" id="degree name" name="degree name" required>   -->
+            </div>
+            <div>
+                <label for="college phone number">College Phone No.(+91):</label>
+                <input type="number" id="college phone no." name="college phone no." required>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the Terms of Service and Privacy Policy.</label>
+            </div>
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+            <p>Already have an account? <a href="../HackFest-Proj-LoginPage-main/index.html" target="_blank">Log in here.</a></p>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

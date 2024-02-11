@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a href="#home" class="arrow-up">
+      <img src="./icons/arrow-up.png" alt="" />
+    </a>
+    <div class="bigImage" id="home">
+      <nav class="backgroundd">
+        <div class="mx-auto h-35 py-3 px-2 sm:px-6 lg:px-8 bottom-border">
+          <div class="relative flex h-30 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <!-- Mobile menu button-->
+              <button
+                type="button"
+                style="background-color: #353083;"
+                class="relative inline-flex items-center justify-center rounded-md p-2 text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white bg-purple-700 hamburger"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <!--
+              Icon when menu is closed.
+              
+              Menu open: "hidden", Menu closed: "block"
+            -->
+                <svg
+                  class="block h-6 w-6 hamburger"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    class="hamburger"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+                <!--
+            Icon when menu is open.
+            
+            Menu open: "block", Menu closed: "hidden"
+          -->
+              </button>
+            </div>
+            <div
+              class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+            >
+              <div class="logo">
+                <img
+                  class="h-20 w-30"
+                  src="./assets/Component 1.png"
+                  alt="Your Company"
+                />
+              </div>
+              <div
+                class="hidden sm:ml-6 sm:block flex justify-center flex-grow"
+              >
+                <div class="flex space-x-10 nav-center h-20">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                  <a
+                    href="#"
+                    class="links rounded-md px-0.5 py-2 text-xl font-medium home active"
+                    aria-current="page"
+                    >Home</a
+                  >
+                  <a
+                    href="#project"
+                    class="links rounded-md px-0.5 py-2 text-xl font-medium complain"
+                    >About Us</a
+                  >
+                  <a
+                    href="#concern"
+                    class="links rounded-md px-0.5 py-2 text-xl font-medium complain"
+                    >Concerns</a
+                  >
+                  <a
+                    href="#faq"
+                    class="links rounded-md px-0.5 py-2 text-xl font-medium complain"
+                    >FAQ</a
+                  >
+                  <a
+                    href="#contact"
+                    class="links rounded-md px-0.5 py-2 text-xl font-medium contact"
+                    >Contact Us</a
+                  >
+                  <a
+                    href="./HackFest-Proj-RegisterPage-main/index.html"
+                    target="_blank"
+                    class="links rounded-md px-0.5 py-2 text-xl font-medium register"
+                    >Register</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+            >
+              <button
+                type="button"
+                class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+              >
+                <span class="absolute -inset-1.5"></span>
+                <span class="sr-only">View notifications</span>
+                <svg
+                  class="h-8 w-8"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+                  />
+                </svg>
+              </button>
+
+              <!-- Profile dropdown -->
+              <div class="relative ml-3 profile-pic">
+                <div>
+                  <button
+                    type="button"
+                    class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                    id="user-menu-button"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                  >
+                    <span class="absolute -inset-1.5"></span>
+                    <span class="sr-only">Open user menu</span>
+                    <img
+                      class="h-10 w-10 rounded-full"
+                      src="./assets/matheus-ferrero-W7b3eDUb_2I-unsplash.jpg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+
+                <!--
+                      Dropdown menu, show/hide based on menu state.
+                      
+                      Entering: "transition ease-out duration-100"
+                      From: "transform opacity-0 scale-95"
+                      To: "transform opacity-100 scale-100"
+                      Leaving: "transition ease-in duration-75"
+                      From: "transform opacity-100 scale-100"
+                      To: "transform opacity-0 scale-95"
+                    -->
+                <div
+                  class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none drop-down-invisible"
+                  role="menu"
+                  aria-orientation="vertical"
+                  aria-labelledby="user-menu-button"
+                  tabindex="-1"
+                >
+                  <!-- Active: "bg-gray-100", Not Active: "" -->
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700"
+                    role="menuitem"
+                    tabindex="-1"
+                    id="user-menu-item-0"
+                    >Your Profile</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700"
+                    role="menuitem"
+                    tabindex="-1"
+                    id="user-menu-item-1"
+                    >Settings</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700"
+                    role="menuitem"
+                    tabindex="-1"
+                    id="user-menu-item-2"
+                    >Sign out</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+          <div
+            class="space-y-1 px-2 pb-3 pt-2 hamburger-items-invisible hamburger-items"
+          >
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a
+              href="#home"
+              class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+              aria-current="page"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              >About</a
+            >
+            <a
+              href="#concern"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              >Concerns</a
+            >
+            <a
+              href="#faq"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              >FAQ</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              >Contact</a
+            >
+            <a
+              href="./HackFest-Proj-RegisterPage-main/index.html"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              >Register</a
+            >
+          </div>
+        </div>
+      </nav>
+      <div class="body">
+        <div class="body-text">
+          <div class="circle"></div>
+          <h2>
+            Smart <br />
+            <span>Anti-Ragging</span> System
+          </h2>
+          <p>
+            <span>Safeguard Against <span id="pointer"></span></span>
+          </p>
+        </div>
+        <div class="img">
+          <img src="./assets/anti-ragging-new-removebg-preview.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="section-2" id="project">
+      <div class="sub-section-2">
+        <div class="picture-2">
+          <div class="sub-picture-2">
+            <div class="box-2">
+              <img class="img1" src="./assets/pic2.jpg" alt="" />
+              <img class="img2" src="./assets/pic4.jpg" alt="" />
+              <img class="img3" src="./assets/pic3.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="text-2">
+          <h3>About Project</h3>
+          <p>
+            Our project revolves around an
+            <span>Anti-Ragging Management System</span> tailored to ensure the
+            safety and well-being of individuals within educational
+            institutions.
+          </p>
+          <br />
+          <p>
+            At its core is a discreet button integrated into every student's ID
+            card, shielded by a protective cover. When students encounter
+            instances of harassment or abuse, they can swiftly activate this
+            button, prompting an immediate alert to the Anti-Ragging Department.
+            Through an alarm system, authorities receive real-time
+            notifications, including the precise location of the distressed
+            student.
+          </p>
+          <br />
+          <p>
+            This seamless process enables rapid intervention and support,
+            fostering a secure environment where students feel empowered to
+            address ragging effectively. By leveraging innovative technology and
+            proactive measures, our system endeavors to create a culture of
+            accountability and respect within educational settings, where
+            individuals can thrive without fear of harassment or intimidation.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-3" id="concern">
+      <div class="sub-section-3">
+        <div class="title-3">
+          <h3>Our Concerns</h3>
+          <p>
+            Driven by the belief that every student deserves a nurturing and
+            harassment-free learning environment, we strive to
+          </p>
+        </div>
+        <div class="concern-3">
+          <div class="concerns">
+            <div class="concern">
+              <img src="./icons/awareness.png" alt="" />
+              <h3 class="title">Raise awareness</h3>
+              <p>
+                We provide educational resources, workshops, and campaigns to
+                raise awareness about the negative consequences of ragging and
+                the importance of proactive intervention.
+              </p>
+            </div>
+            <div class="concern">
+              <img src="./icons/alarm.png" alt="" />
+              <h3 class="title">Facilitate Reporting</h3>
+              <p>
+                Our user-friendly interface enables students to report incidents
+                of ragging discreetly and securely. By offering multiple
+                channels for reporting, including a distress button and
+                confidential reporting mechanisms, we ensure that students can
+                seek help without fear of retaliation.
+              </p>
+            </div>
+          </div>
+          <div class="concerns">
+            <div class="concern">
+              <img src="./icons/heart.png" alt="" />
+              <h3 class="title">Supportive Community</h3>
+              <p>
+                We foster a supportive community where students feel empowered
+                to stand up against ragging and support their peers in times of
+                need. Through peer-to-peer support networks and access to
+                counseling services, we strive to create a culture of empathy,
+                solidarity, and accountability.
+              </p>
+            </div>
+            <div class="concern">
+              <img src="./icons/handshake.png" alt="" />
+              <h3 class="title">Advocate for Change</h3>
+              <p>
+                We collaborate with educational institutions, policymakers, and
+                advocacy groups to advocate for stronger anti-ragging policies,
+                effective enforcement mechanisms, and comprehensive support
+                services for victims and survivors.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-4" id="faq">
+      <div class="sub-section-4">
+        <div class="faq">
+          <div class="faq-content">
+            <h2>Frequently Asked Questions</h2>
+            <div class="accordion">
+              <details>
+                <summary>
+                  What is ragging, and why is it a concern?
+                  <img src="./icons/plus.png" alt="" />
+                </summary>
+                <p>
+                  Ragging refers to the practice of subjecting new students to
+                  harassment, bullying, or humiliation by their seniors in
+                  educational institutions. It is a serious concern as it can
+                  have detrimental effects on students' mental health, academic
+                  performance, and overall well-being.
+                </p>
+              </details>
+              <details>
+                <summary>
+                  How can I report an incident of ragging?<img
+                    src="./icons/plus.png"
+                    alt=""
+                  />
+                </summary>
+                <p>
+                  You can report an incident of ragging through our online
+                  platform by clicking on the "Report Incident" button and
+                  providing details about the incident. Alternatively, you can
+                  contact a designated authority or use our anonymous reporting
+                  mechanism to ensure confidentiality.
+                </p>
+              </details>
+              <details>
+                <summary>
+                  Is my identity protected if I report an incident?<img
+                    src="./icons/plus.png"
+                    alt=""
+                  />
+                </summary>
+                <p>
+                  Yes, we prioritize the confidentiality and anonymity of
+                  individuals reporting incidents of ragging. Your identity will
+                  be protected, and your information will only be shared with
+                  authorized personnel for investigation and intervention
+                  purposes.
+                </p>
+              </details>
+              <details>
+                <summary>
+                  What support services are available for victims of
+                  ragging?<img src="./icons/plus.png" alt="" />
+                </summary>
+                <p>
+                  We offer access to counseling services, peer support groups,
+                  and legal assistance for victims of ragging. Our team is
+                  dedicated to providing comprehensive support and guidance to
+                  help individuals cope with the effects of ragging and navigate
+                  the reporting process.
+                </p>
+              </details>
+
+              <details>
+                <summary>
+                  How can I get involved in the anti-ragging initiative?<img
+                    src="./icons/plus.png"
+                    alt=""
+                  />
+                </summary>
+                <p>
+                  You can get involved in our initiative by spreading awareness
+                  about the harmful effects of ragging, promoting a culture of
+                  respect and inclusion in your institution, and reporting
+                  incidents of ragging promptly. Additionally, you can volunteer
+                  with our organization to support advocacy efforts and
+                  community outreach programs.
+                </p>
+              </details>
+              <details>
+                <summary>
+                  What measures are in place to prevent ragging in educational
+                  institutions?<img src="./icons/plus.png" alt="" />
+                </summary>
+                <p>
+                  We collaborate with educational institutions, policymakers,
+                  and advocacy groups to advocate for stronger anti-ragging
+                  policies, effective enforcement mechanisms, and proactive
+                  prevention strategies. We believe that education, awareness,
+                  and accountability are key to preventing ragging and creating
+                  safer learning environments for all.
+                </p>
+              </details>
+              <details>
+                <summary>
+                  How can I contribute to creating a safer campus
+                  environment?<img src="./icons/plus.png" alt="" />
+                </summary>
+                <p>
+                  You can contribute to creating a safer campus environment by
+                  speaking out against ragging, supporting victims and
+                  survivors, and actively participating in initiatives aimed at
+                  promoting respect, empathy, and inclusivity. Together, we can
+                  work towards eradicating ragging and fostering a culture of
+                  mutual respect and understanding in educational institutions.
+                </p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form action="">
+      <div class="section-5" id="contact">
+        <div class="sub-section-5">
+          <div class="contact-5">
+            <div class="contact-input">
+              <div class="text">
+                <span>Contact with Us</span>
+                <h3>Write a problem</h3>
+              </div>
+              <div class="name-email">
+                <input
+                  class="input"
+                  type="text"
+                  id="username"
+                  name="username"
+                  placeholder="Full name"
+                  required
+                />
+                <input
+                  class="input"
+                  type="email"
+                  placeholder="Email address"
+                  required
+                />
+              </div>
+              <div class="phone-subject">
+                <input
+                  class="input"
+                  type="number"
+                  placeholder="Phone"
+                  required
+                />
+                <input
+                  class="input"
+                  type="text"
+                  placeholder="Subject"
+                  required
+                />
+              </div>
+              <textarea
+                class="input"
+                placeholder="Message..."
+                cols="30"
+                rows="10"
+                required
+              ></textarea>
+              <!-- <div class="submit"><a href="mailto: 1827aditi@gmail.com">Send</a></div> -->
+              <button type="submit" class="send">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <footer class="footer">
+      <div class="sub-footer">
+        <div class="footer-content">
+          <div class="footer-section contact-6">
+            <h3>Contact Us</h3>
+            <a href="info@antiragging.org" target="_blank"
+              >Email: info@antiragging.org
+            </a>
+            <p>Phone: +123-456-7890</p>
+          </div>
+          <div class="footer-section emergency-contacts">
+            <h3>Emergency Contacts</h3>
+            <p>Campus Security: 911</p>
+            <p>Counseling Services: +123-456-7891</p>
+          </div>
+          <div class="footer-section resources">
+            <h3>Resources</h3>
+            <p><a href="#">Counseling Services</a></p>
+            <p><a href="#">Legal Aid Organizations</a></p>
+            <p><a href="#">Student Support Groups</a></p>
+          </div>
+          <div class="footer-section policies">
+            <h3>Anti-Ragging Policies</h3>
+            <p><a href="#">Zero-Tolerance Policy</a></p>
+            <p><a href="#">Consequences for Ragging</a></p>
+          </div>
+        </div>
+        <div class="socials">
+          <a href="https://facebook.com" target="_blank"
+            ><img src="./icons/facebook.png" alt=""
+          /></a>
+          <a href="https://linkedin.com" target="_blank"
+            ><img src="./icons/linkedin.png" width="30px" alt=""
+          /></a>
+          <a href="https://twitter.com" target="_blank">
+            <img src="./icons/twitter.png" width="30px" alt=""
+          /></a>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Anti-Ragging Management. All rights reserved.</p>
+          <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      let dropDown = document.querySelector(".drop-down-invisible");
+      let profilePic = document.querySelector(".profile-pic");
+      let hamburger = document.querySelector(".hamburger");
+      let hamburgerItems = document.querySelector(".hamburger-items-invisible");
+      document.addEventListener("DOMContentLoaded", function () {
+        let links = document.querySelectorAll(".links a");
+
+        links.forEach(function (link) {
+          link.addEventListener("click", function () {
+            links.forEach(function (otherLink) {
+              otherLink.classList.remove("active");
+            });
+            this.classList.add("active");
+          });
+        });
+      });
+      profilePic.addEventListener("click", () => {
+        dropDown.classList.toggle("drop-down-invisible");
+      });
+      hamburger.addEventListener("click", () => {
+        hamburgerItems.classList.toggle("hamburger-items-invisible");
+      });
+
+      const words = ["Bullying", "Harassment", "Teasing", "Mocking"];
+      let index = 0;
+      const speed = 1000;
+      function typeWriter() {
+        let word = words[index];
+        let pointer = document.getElementById("pointer");
+        let text = pointer.innerHTML;
+        let length = text.length;
+
+        if (length > 0) {
+          pointer.innerHTML = text.slice(0, length - 1);
+          setTimeout(typeWriter, speed / 10);
+        } else {
+          index = (index + 1) % words.length;
+          word = words[index];
+          let i = 0;
+          function type() {
+            if (i < word.length) {
+              pointer.innerHTML += word.charAt(i);
+              i++;
+              setTimeout(type, speed / 10);
+            } else {
+              setTimeout(typeWriter, speed * 2);
+            }
+          }
+          type();
+        }
+      }
+      window.onload = function () {
+        typeWriter();
+      };
+    </script>
+  </body>
+</html>
